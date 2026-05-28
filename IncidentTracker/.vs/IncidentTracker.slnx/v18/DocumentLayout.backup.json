@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sekne\\Music\\IncidentTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C82EDB78-FCA2-D6FC-F022-99AA2B3EBF67}|IncidentTracker.Api\\IncidentTracker.Api.csproj|c:\\users\\sekne\\music\\incidenttracker\\incidenttracker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C82EDB78-FCA2-D6FC-F022-99AA2B3EBF67}|IncidentTracker.Api\\IncidentTracker.Api.csproj|solutionrelative:incidenttracker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C82EDB78-FCA2-D6FC-F022-99AA2B3EBF67}|IncidentTracker.Api\\IncidentTracker.Api.csproj|c:\\users\\sekne\\music\\incidenttracker\\incidenttracker.api\\services\\incidentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C82EDB78-FCA2-D6FC-F022-99AA2B3EBF67}|IncidentTracker.Api\\IncidentTracker.Api.csproj|solutionrelative:incidenttracker.api\\services\\incidentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IncidentService.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Music\\IncidentTracker\\IncidentTracker.Api\\Services\\IncidentService.cs",
+              "RelativeDocumentMoniker": "IncidentTracker.Api\\Services\\IncidentService.cs",
+              "ToolTip": "C:\\Users\\sekne\\Music\\IncidentTracker\\IncidentTracker.Api\\Services\\IncidentService.cs",
+              "RelativeToolTip": "IncidentTracker.Api\\Services\\IncidentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T07:36:29.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Music\\IncidentTracker\\IncidentTracker.Api\\Program.cs",
+              "RelativeDocumentMoniker": "IncidentTracker.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\sekne\\Music\\IncidentTracker\\IncidentTracker.Api\\Program.cs",
+              "RelativeToolTip": "IncidentTracker.Api\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T07:34:39.515Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

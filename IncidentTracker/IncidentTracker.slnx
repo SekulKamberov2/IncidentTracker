@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="IncidentTracker.Api/IncidentTracker.Api.csproj" />
+  <Project Path="IncidentTracker.Tests/IncidentTracker.Tests.csproj" Id="87707ff4-8258-48a7-b187-c8e512bc0f4d" />
+</Solution>
