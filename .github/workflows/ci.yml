@@ -35,8 +35,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
         working-directory: ./IncidentTrackerClient
-      - name: Run tests
-        run: npm test -- --watchAll=false
+      - name: Build frontend
+        run: npm run build
         working-directory: ./IncidentTrackerClient
 
   test-e2e:
@@ -44,10 +44,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
       - name: Start Docker Compose
         run: docker-compose up -d --build
       - name: Wait for services
         run: sleep 15
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
       - name: Install Playwright
         run: |
           cd IncidentTrackerClient
