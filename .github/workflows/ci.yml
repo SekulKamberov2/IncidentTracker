@@ -50,24 +50,12 @@ jobs:
         run: docker-compose up -d --build
       - name: Wait for services
         run: |
-          echo "Waiting for backend..."
-          for i in {1..30}; do
-            if curl -s http://localhost:5000/api/incidents > /dev/null; then
-              echo "Backend is ready"
-              break
-            fi
-            echo "Waiting for backend... ($i/30)"
-            sleep 2
-          done
-          echo "Waiting for frontend..."
-          for i in {1..30}; do
-            if curl -s http://localhost:3000 > /dev/null; then
-              echo "Frontend is ready"
-              break
-            fi
-            echo "Waiting for frontend... ($i/30)"
-            sleep 2
-          done
+          echo "Waiting for services to be ready..."
+          sleep 20
+          echo "Checking backend..."
+          curl -v http://localhost:5000/api/incidents || true
+          echo "Checking frontend..."
+          curl -v http://localhost:3000 || true
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

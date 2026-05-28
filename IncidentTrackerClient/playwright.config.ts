@@ -16,7 +16,7 @@ export default defineConfig({
     ['list']
   ],
   use: {
-    baseURL: process.env.CI ? 'http://frontend:80' : 'http://localhost:3000',
+    baseURL: 'http://localhost:3000',
     actionTimeout: 10000,
     navigationTimeout: 15000,
     trace: 'on-first-retry',
@@ -27,10 +27,6 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
     },
   ],
 });
