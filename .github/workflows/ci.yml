@@ -49,7 +49,25 @@ jobs:
       - name: Start Docker Compose
         run: docker-compose up -d --build
       - name: Wait for services
-        run: sleep 15
+        run: |
+          echo "Waiting for backend..."
+          for i in {1..30}; do
+            if curl -s http://localhost:5000/api/incidents > /dev/null; then
+              echo "Backend is ready"
+              break
+            fi
+            echo "Waiting for backend... ($i/30)"
+            sleep 2
+          done
+          echo "Waiting for frontend..."
+          for i in {1..30}; do
+            if curl -s http://localhost:3000 > /dev/null; then
+              echo "Frontend is ready"
+              break
+            fi
+            echo "Waiting for frontend... ($i/30)"
+            sleep 2
+          done
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -58,15 +76,16 @@ jobs:
         run: |
           cd IncidentTrackerClient
           npm ci
-          npx playwright install --with-deps
+          npx playwright install --with-deps chromium
       - name: Run E2E tests
         run: |
           cd IncidentTrackerClient
-          npx playwright test
+          npx playwright test --project=chromium
         env:
           BASE_URL: http://localhost:3000
       - name: Stop Docker
         run: docker-compose down
+        if: always()
       - name: Upload report
         uses: actions/upload-artifact@v4
         if: always()

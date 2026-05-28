@@ -13,11 +13,10 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [
     ['html', { outputFolder: 'playwright-report' }],
-    ['json', { outputFile: 'test-results.json' }],
     ['list']
   ],
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: process.env.CI ? 'http://frontend:80' : 'http://localhost:3000',
     actionTimeout: 10000,
     navigationTimeout: 15000,
     trace: 'on-first-retry',
